@@ -1,7 +1,7 @@
 # News manager V0.1
 ## Introduce
 + Windows based
-+ A simple news summary tool
++ A simple news summary tool（The major countries around the world）
 + The news is from Google News
 + Help users quickly browse the latest world events
 ## Operation
