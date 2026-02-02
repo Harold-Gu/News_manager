@@ -1,0 +1,133 @@
+/* =======================================================
+   现代科技风 (Modern Tech Theme)
+   主色: #1E1E2E (背景), #89B4FA (蓝色高亮)
+   警告色: #F38BA8 (红色)
+   文字: #CDD6F4 (白)
+   ======================================================= */
+
+/* 全局设定 */
+QWidget {
+    background-color: #1E1E2E;
+    color: #CDD6F4;
+    font-family: "Segoe UI", "Microsoft YaHei", "Consolas";
+    font-size: 10pt;
+}
+
+/* 分组框 (GroupBox) */
+QGroupBox {
+    border: 1px solid #45475A;
+    border-radius: 4px;
+    margin-top: 24px; /* 为标题留出空间 */
+    background-color: #262837; /* 比背景稍浅 */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    padding: 0 5px;
+    color: #89B4FA; /* 霓虹蓝标题 */
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+/* 按钮 (Button) - 默认样式 */
+QPushButton {
+    background-color: #313244;
+    border: 1px solid #585B70;
+    border-radius: 4px;
+    color: #CDD6F4;
+    padding: 6px 15px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #45475A;
+    border: 1px solid #89B4FA; /* 悬停时边框变亮 */
+    color: #FFFFFF;
+}
+
+QPushButton:pressed {
+    background-color: #89B4FA;
+    color: #1E1E2E; /* 按下时反色 */
+}
+
+QPushButton:disabled {
+    background-color: #181825;
+    color: #6C7086;
+    border: 1px solid #313244;
+}
+
+/* 特殊按钮：红色警告/重要按钮 (通过 objectName 定制) */
+QPushButton#btn_accent {
+    background-color: #381E28;
+    border: 1px solid #F38BA8;
+    color: #F38BA8;
+}
+
+QPushButton#btn_accent:hover {
+    background-color: #F38BA8;
+    color: #1E1E2E;
+}
+
+/* 下拉菜单 (ComboBox) */
+QComboBox {
+    background-color: #181825;
+    border: 1px solid #45475A;
+    border-radius: 4px;
+    padding: 5px;
+    color: #CDD6F4;
+}
+
+QComboBox:on { /* 下拉时 */
+    border: 1px solid #89B4FA;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1E1E2E;
+    selection-background-color: #313244;
+    border: 1px solid #45475A;
+}
+
+/* 文本编辑区 (TextEdit) */
+QTextEdit {
+    background-color: #11111B; /* 极深色背景 */
+    border: 1px solid #45475A;
+    border-radius: 4px;
+    color: #A6ADC8;
+    padding: 5px;
+    font-family: "Consolas", "Courier New"; /* 代码风格字体 */
+}
+
+/* 进度条 (ProgressBar) */
+QProgressBar {
+    border: 1px solid #45475A;
+    background-color: #1E1E2E;
+    border-radius: 4px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+QProgressBar::chunk {
+    background-color: #A6E3A1; /* 矩阵绿 */
+    width: 10px;
+    margin: 0.5px;
+}
+
+/* 滚动条 (ScrollBar) - 细节决定成败 */
+QScrollBar:vertical {
+    border: none;
+    background: #1E1E2E;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #45475A;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
