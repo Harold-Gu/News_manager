@@ -2,3 +2,4 @@ PyQt6
 requests
 deep-translator
 jieba
+wordcloud
