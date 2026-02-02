@@ -20,7 +20,7 @@ COUNTRY_CONFIGS = {
     "巴西 (BR)": {"url": "https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419"},
 }
 
-IP_API_URL = "https://api.ipify.org?format=json"
+IP_API_URL = "http://ip-api.com/json/?lang=zh-CN"
 
 # 默认保存目录配置键名 (可扩展用于保存用户配置)
 DEFAULT_SAVE_DIR = None
