@@ -8,3 +8,6 @@
 + Running main.py
 + The "requirements.txt" file lists the libraries that need to be installed.
 + It will be packaged into an .exe file later.
+## Future
++ **Continuously update and expand more functions**
++ Welcome to test for bugs
