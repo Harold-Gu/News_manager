@@ -98,14 +98,11 @@ class MainWindow(QMainWindow):
         self.text_area.setOpenExternalLinks(True)
         layout.addWidget(self.text_area)
 
-    # =======================================================
-    # 👇 新增功能：系统托盘初始化
-    # =======================================================
     def init_system_tray(self):
         """配置系统托盘图标和菜单"""
         self.tray_icon = QSystemTrayIcon(self)
 
-        # 使用系统自带的电脑图标（为了防止你没有图标文件报错）
+        # 使用系统自带的电脑图标（
         icon = self.style().standardIcon(QStyle.StandardPixmap.SP_ComputerIcon)
         self.tray_icon.setIcon(icon)
         self.tray_icon.setToolTip("日报助手 (运行中)")
@@ -122,21 +119,19 @@ class MainWindow(QMainWindow):
 
         # 2. 真正退出程序
         quit_action = QAction("退出程序", self)
-        # 注意：这里连接的是 QApplication 的 quit，用于彻底杀死进程
+        # 这里连接的是 QApplication 的 quit，用于彻底杀死进程
         quit_action.triggered.connect(QApplication.instance().quit)
         tray_menu.addAction(quit_action)
 
         self.tray_icon.setContextMenu(tray_menu)
 
-        # --- 处理左键点击 (点击图标恢复窗口) ---
+        # 处理左键点击
         self.tray_icon.activated.connect(self.on_tray_icon_activated)
 
         # 显示托盘图标
         self.tray_icon.show()
 
-    # =======================================================
-    # 👇 核心修改：拦截关闭事件
-    # =======================================================
+    # 拦截关闭事件
     def closeEvent(self, event):
         """当用户点击窗口右上角的 X 时触发"""
         if self.tray_icon.isVisible():
@@ -164,9 +159,6 @@ class MainWindow(QMainWindow):
             self.showNormal()  # 恢复显示
             self.activateWindow()  # 将窗口置顶拿到焦点
 
-    # =======================================================
-    # 👇 原有业务逻辑 (保持不变)
-    # =======================================================
     def fetch_ip(self):
         self.ip_label.setText("📍 属地: 定位中...")
         self.worker = DataWorker("ip")
