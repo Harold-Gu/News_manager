@@ -7,6 +7,7 @@
 ## Operation
 + Running main.py
 + The "requirements.txt" file lists the libraries that need to be installed.
++ When running this project locally, you need to first enter "pip install -r requirements.txt" in the command line.
 + It will be packaged into an .exe file later.
 ## Future
 + **Continuously update and expand more functions**
