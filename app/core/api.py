@@ -78,7 +78,7 @@ def fetch_news_data(rss_url, do_translate=False):
         if response.status_code == 200:
             root = ET.fromstring(response.content)
             news_items = []
-            for item in root.findall('./channel/item')[:5]:
+            for item in root.findall('./channel/item')[:20]:
                 title = item.find('title').text
                 link = item.find('link').text
                 clean_title = title.split(' - ')[0] if title else "无标题"
